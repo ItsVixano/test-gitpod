@@ -1,18 +1,10 @@
-FROM gitpod/workspace-full
+FROM fr3akyphantom/droid-builder:latest
 USER root
 RUN apt-get update -y \
- && apt-get dist-upgrade -y \
+ && apt-get upgrade -y \
  && apt-get install -y \
-    apt-utils \
- && apt-get install -y \
-    bc neofetch rclone git-core git gnupg flex bison build-essential zip curl wget zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig zstd tmate \
- && apt-get install -y \
-    python3 vagrant python3-pip libssl-dev libffi-dev python-dev python3-venv \
- && apt-get install -y \
-    openjdk-8-jdk \
- && apt-get install -y \
-    clangd-9
-RUN curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo \
- && chmod a+rx /usr/local/bin/repo
+    clangd-9 \
+    tmate \
+    rclone
 RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 USER root
