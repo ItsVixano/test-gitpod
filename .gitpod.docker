@@ -3,10 +3,7 @@ USER root
 # Install few essential stuffs for gitpod
 RUN apt-get update -y \
  && apt-get upgrade -y \
- && apt-get install -y \
-    clangd-9 \
-    tmate \
-    rclone
+ && apt-get install -y clangd-9 tmate rclone
 # Cleanup a bit the env
 RUN apt-get clean \
     && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /tmp/*
