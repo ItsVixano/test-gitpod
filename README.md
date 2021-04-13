@@ -4,7 +4,7 @@
 
 **Brought by** @ItsVixano
 
-**Based on** fr3akyphantom docker image
+**Based on** starlight5234 docker image
 
 ## For setup it
 
