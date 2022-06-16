@@ -1,9 +1,9 @@
-FROM starlight2834/ci_docker:latest
+FROM ubuntu:latest
 USER root
 # Install few essential stuffs for gitpod
 RUN apt-get update -y \
  && apt-get upgrade -y \
- && apt-get install --no-install-recommends -y clangd-9 tmate rclone nano sudo
+ && apt-get install --no-install-recommends -y tmate rclone nano sudo
 # Cleanup a bit the env
 RUN apt-get clean \
     && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /tmp/*

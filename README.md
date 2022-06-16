@@ -4,7 +4,7 @@
 
 **Brought by** @ItsVixano
 
-**Based on** starlight5234 docker image
+**Based on** Ubuntu docker image
 
 ## For setup it
 
